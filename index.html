@@ -5,60 +5,63 @@
     <meta charset="UTF-8">
     <title>La Nuova Scuola Grande di San Polo</title>
     <style>
-        body {
-            font-family: "Georgia", serif;
-            background-color: #f9f9f9;
-            color: #222;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Georgia', serif;
+            color: white;
             text-align: center;
-            padding: 50px;
+        }
+        .bg {
+            background-image: url('logo.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            letter-spacing: 2px;
+            font-size: 2.5em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.5em 1em;
+            margin-bottom: 1em;
             font-weight: normal;
-        }
-        img {
-            max-width: 300px;
-            height: auto;
-            margin-bottom: 40px;
+            letter-spacing: 0.1em;
         }
         form {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1em 2em;
+            border-radius: 10px;
+        }
+        input {
+            margin: 0.5em;
+            padding: 0.5em;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+        #email {
+            margin-top: 1em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.5em 1em;
+            border-radius: 5px;
             display: inline-block;
-            text-align: left;
-            margin-top: 20px;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-        #message {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .email {
-            margin-top: 50px;
-            font-size: 14px;
-            color: #555;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
-    <h1>La Nuova Scuola Grande di San Polo</h1>
-    <img src="logo.jpeg" alt="Logo">
-    <form onsubmit="event.preventDefault(); document.getElementById('message').textContent = 'Accesso riservato. Contattare l'amministrazione per ottenere credenziali valide.';">
-        <input type="text" placeholder="Username" required><br>
-        <input type="password" placeholder="Password" required><br>
-        <input type="submit" value="Submit">
-    </form>
-    <div id="message"></div>
-    <div class="email">info@lanuovascuolagrandedisanpolo.org</div>
+    <div class="bg">
+        <h1>La Nuova Scuola Grande di San Polo</h1>
+        <form onsubmit="event.preventDefault(); alert('Accesso riservato. Contattare l\'amministrazione per ottenere credenziali valide.');">
+            <input type="text" placeholder="Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="email">info@lanuovascuolagrandedisanpolo.org</div>
+    </div>
 </body>
 </html>
